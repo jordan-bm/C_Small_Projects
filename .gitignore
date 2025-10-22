@@ -1,0 +1,19 @@
+# Ignore compiled files and executables
+*.o
+*.out
+*.exe
+area_calculator
+array_operations
+password_validator
+grade_processor
+
+# Ignore editor-specific files
+*.swp
+.vscode/
+.idea/
+
+# Ignore generated output
+final.txt
+
+# System files
+.DS_Store
