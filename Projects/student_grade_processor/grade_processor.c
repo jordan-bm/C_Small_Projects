@@ -205,9 +205,9 @@ void print_console_output(int total_students, int* grade_counts) {
     printf("Number of F's: %d\n", grade_counts[6]);
 }
 
-// Output to final.txt
+// Output to grade_info.txt
 void write_final_file(Student* students, int count, float avg_assign, float avg_mid, float avg_final, int* grade_counts) {
-    FILE* fp = fopen("final.txt", "w");
+    FILE* fp = fopen("grade_info.txt", "w");
     if (!fp) {
         perror("Unable to create output file");
         return;

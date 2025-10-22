@@ -11,9 +11,5 @@ grade_processor
 *.swp
 .vscode/
 .idea/
-
-# Ignore generated output
-final.txt
-
-# System files
 .DS_Store
+

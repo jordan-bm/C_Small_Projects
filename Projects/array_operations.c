@@ -9,24 +9,25 @@ int max_array(int *arr, int size);
 bool is_prime(int n);
 void primes_array(int *arr, int size);
 
-int main(int argc, char *argv[]) {
-    if (argc < 3) {
-        printf("Usage: %s <option> <array_size> [array_elements...]\n", argv[0]);
-        printf("Options:\n"
-               "  -p: Print array elements\n"
-               "  -s: Calculate sum\n"
-               "  -m: Find maximum\n"
-               "  -c: Print primes\n");
-        return EXIT_FAILURE;
-    }
+int main() {
+    char option;
+    int size;
 
-    char option = argv[1][1];
-    int size = atoi(argv[2]);
+    printf("Choose option:\n");
+    printf("  p: Print array elements\n");
+    printf("  s: Calculate sum\n");
+    printf("  m: Find maximum\n");
+    printf("  c: Print primes\n");
+    printf("Enter option: ");
+    scanf(" %c", &option);
+
+    printf("Enter array size: ");
+    scanf("%d", &size);
+
     int *arr = malloc(size * sizeof(int));
-
-    // Initialize array (set elements to 0 if not provided)
+    printf("Enter %d array elements separated by spaces:\n", size);
     for (int i = 0; i < size; i++) {
-        arr[i] = (i < argc - 3) ? atoi(argv[i + 3]) : 0;
+        scanf("%d", &arr[i]);
     }
 
     switch (option) {
